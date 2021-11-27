@@ -8,8 +8,8 @@
 
 // Heroku App
 date_default_timezone_set("Asia/Manila");
-define('DB_SERVER','us-cdbr-east-04.cleardb.com');
-define('DB_USERNAME','b6eb196b6c64c8');
-define('DB_PASSWORD','9b1e7a3a');
-define('DB_DATABASE','heroku_79156a6c8d0ca2f');
+define('DB_SERVER','us-cdbr-iron-east-04.cleardb.net');
+define('DB_USERNAME','bd050aca9a448d');
+define('DB_PASSWORD','ee32adac');
+define('DB_DATABASE','heroku_8c53f4d1329000a');
 session_start();
