@@ -1,0 +1,620 @@
+body {
+  text-align: center;
+}
+
+.h_icon {
+  font-size: 26pt;
+  vertical-align: -5px;
+  margin-right: 10px;
+}
+
+h1 {
+  font-size: 21pt;
+  margin-bottom: 50px;
+}
+
+.container {
+  width: 800px;
+  margin: 10px;
+}
+
+.list_item{
+  width: 100%;
+  height: 60px;
+  background: #575757;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 18px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+.list_item[data-content="null"]{
+  display: none;
+}
+
+.list_item:hover {
+  background: #858585;
+  transition: all 0.5s ease;
+}
+
+.status {
+  float: right;
+  color: #ff8929;
+  margin-left: 5px;
+}
+
+b[data-content="DONE"] {
+  color: #00a100;
+}
+
+b[data-content="CANCELED"] {
+  color: #ff2f2f;
+}
+
+b[data-content="EMPTY"] {
+  color: #000000;
+}
+
+.pay_status{
+  float: right;
+  color: #ff2f2f;
+  margin-left: 5px;
+  text-decoration: underline;
+}
+
+b[data-content="PAID"] {
+  color: #00a100;
+}
+
+b[data-content="PARTIALLY PAID"] {
+  color: #ff8929;
+}
+
+.view-icon {
+  float: right;
+  margin-top: -2px;
+  margin-left: 20px;
+  font-size: 21pt;
+}
+
+/* View Appointments */
+
+#container_left{
+  float: left;
+  display: block;
+  width: 440px;
+  margin: 10px;
+  background-color: #ffffff;
+}
+
+#header_left{
+  padding: 20px;
+  height: 70px;
+  width: 100%;
+  background-color: #575757;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+#form_left{
+  padding: 20px;
+  overflow: hidden;
+}
+
+#container_right{
+  float: right;
+  display: none;
+  width: 440px;
+  margin: 10px;
+  background-color: #ffffff;
+}
+
+#header_right{
+  padding: 20px;
+  height: 70px;
+  width: 100%;
+  background-color: #575757;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+#form_right{
+  padding: 20px;
+  overflow: hidden;
+}
+
+#container_extra{
+  float: right;
+  display: none;
+  width: 440px;
+  margin: 10px;
+  background-color: #ffffff;
+}
+
+#header_extra{
+  padding: 20px;
+  height: 70px;
+  width: 100%;
+  background-color: #575757;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+#form_extra{
+  padding: 20px;
+  overflow: hidden;
+}
+
+.header-icon {
+  margin-top: -2px;
+  margin-left: 20px;
+  font-size: 21pt;
+}
+
+b.header-title{
+  vertical-align: top;
+}
+
+.title-right{
+  float: right;
+}
+
+.text-right{
+  margin-left: 6px;
+  font-weight: normal;
+  float: right;
+}
+
+.title-left{
+  float: left;
+}
+
+.text-left{
+  margin-left: 4px;
+  font-weight: normal;
+  float: left;
+}
+
+.note-text{
+  margin-top: 10px;
+  float: left;
+  clear: both;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #575757;
+  border-radius: 30px;
+  resize: vertical;
+}
+
+form[data-content="DONE"]{
+  display: none;
+}
+
+form[data-content="CANCELED"] {
+  display: none;
+}
+
+.form-button-icn{
+  font-size: 18pt;
+  margin-left: -5px;
+  margin-right: 7px;
+  vertical-align: -3px;
+}
+
+.approveBTN{
+  font-size: 12pt;
+  width: 140px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: #00a100;
+  color: #ffffff;
+  border: none;
+  text-decoration: none;
+  margin-top: 25px;
+  margin-right: 10px;
+  transition: all 0.5s ease;
+}
+
+.reschedBTN{
+  font-size: 12pt;
+  width: 160px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: #ff8929;
+  color: #ffffff;
+  border: none;
+  text-decoration: none;
+  margin-top: 25px;
+  transition: all 0.5s ease;
+}
+
+.cancelBTN{
+  font-size: 12pt;
+  width: 140px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: #ff2f2f;
+  color: #ffffff;
+  border: none;
+  text-decoration: none;
+  margin-top: 25px;
+  transition: all 0.5s ease;
+}
+
+.reschedBTN:hover, .cancelBTN:hover, .approveBTN:hover{
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px #000000 solid;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+#pay-droplist{
+  margin-top: 20px;
+  font-size: 12pt;
+  text-align: center;
+  border: 1px solid #575757;
+  border-radius: 30px;
+  width: 180px;
+  padding: 5px;
+}
+
+option{
+  padding: 5px;
+}
+
+option[value="PAID"]{
+  color: #00a100;
+}
+
+option[value="NOT PAID"]{
+  color: #ff2f2f;
+}
+
+option[value="PARTIALLY PAID"]{
+  color: #ff8929;
+}
+
+textarea::selection{
+  background-color: #ffff00;
+}
+
+/* Scheduler Form */
+#sched-title{
+  margin-top: 10px;
+}
+
+#sched_title-text{
+  float: right;
+  border: 1px solid;
+  font-size: 12pt;
+  border-radius: 30px;
+  padding: 10px;
+  border: 1px solid #575757;
+}
+
+#appt_pay-title{
+  margin-top: 25px;
+}
+
+#event_type-title{
+  margin-top: 35px;
+}
+
+#event_type-dropdown{
+  margin-top: 20px;
+  font-size: 12pt;
+  text-align: center;
+  border: 1px solid #575757;
+  border-radius: 30px;
+  width: 180px;
+  padding: 5px;
+  float: right;
+}
+
+#pay-droplist-scheduler{
+  margin-top: 20px;
+  font-size: 12pt;
+  text-align: center;
+  border: 1px solid #575757;
+  border-radius: 30px;
+  width: 180px;
+  padding: 5px;
+  float: right;
+}
+
+#priest-title{
+  clear: left;
+  margin-top: 31px;
+}
+
+#priest-dropdown{
+  margin-top: 20px;
+  font-size: 12pt;
+  text-align: center;
+  border: 1px solid #575757;
+  border-radius: 30px;
+  width: 180px;
+  padding: 5px;
+  float: right;
+}
+
+#category-title{
+  clear: left;
+  margin-top: 25px;
+}
+
+#private{ /* RDO button */
+  float: right;
+  width: 50px;
+  height: 20px;
+  margin-top: 25px;
+}
+
+#privateLabel{ /* label */
+  float: right;
+  font-size: 14pt;
+  margin-top: 20px;
+  margin-right: 30px;
+}
+
+#public{ /* RDO button */
+  float: right;
+  width: 50px;
+  height: 20px;
+  margin-top: 25px;
+}
+
+#publicLabel{ /* label */
+  float: right;
+  font-size: 14pt;
+  margin-top: 20px;
+  margin-right: 20px;
+  clear: right;
+}
+
+.clear_both{
+  clear: both;
+}
+
+#schedule-title{
+  font-size: 14pt;
+  float: left;
+  margin-top: 20px;
+  margin-left: 130px;
+}
+
+#startDate-title{
+  margin-top: 20px;
+}
+
+#endDate-title{
+  margin-top: 20px;
+}
+
+#startTime-title{
+  margin-top: 20px;
+}
+
+#endTime-title{
+  margin-top: 20px;
+}
+
+#note-title{
+  margin-top: 20px;
+}
+
+.date_setter{
+  margin-top: 10px;
+  font-size: 12pt;
+  text-align: center;
+  border: 1px solid #575757;
+  border-radius: 30px;
+  width: 180px;
+  padding: 5px;
+  float: right;
+}
+
+.text-form{
+  font-size: 11pt;
+  margin-top: 10px;
+  float: left;
+  clear: both;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #575757;
+  border-radius: 30px;
+  resize: vertical;
+}
+
+.resched-title{
+  margin-top: 20px;
+}
+
+/* Filter & Search */
+#filter_type-dropdown{
+  margin-right: 10px;
+  font-size: 12pt;
+  text-align: center;
+  border: 1px solid #575757;
+  border-radius: 30px;
+  width: 180px;
+  padding: 5px;
+}
+
+#filter_priest-dropdown{
+  margin-right: 10px;
+  font-size: 12pt;
+  text-align: center;
+  border: 1px solid #575757;
+  border-radius: 30px;
+  width: 180px;
+  padding: 5px;
+}
+
+#filter_status-dropdown{
+  margin-right: 10px;
+  font-size: 12pt;
+  text-align: center;
+  border: 1px solid #575757;
+  border-radius: 30px;
+  width: 180px;
+  padding: 5px;
+}
+
+#filter_pay-dropdown{
+  margin-right: 10px;
+  font-size: 12pt;
+  text-align: center;
+  border: 1px solid #575757;
+  border-radius: 30px;
+  width: 180px;
+  padding: 5px;
+}
+
+#filterBTN{
+  font-size: 12pt;
+  width: 120px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: #858585;
+  color: #ffffff;
+  border: none;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+#filterBTN:hover{
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px #000000 solid;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.filter-icn{
+  font-size: 21pt;
+  margin-right: 7px;
+  vertical-align: -6px;
+}
+
+.search_box{
+  margin-top: 10px;
+  margin-left: 260px;
+  font-size: 12pt;
+  text-align: center;
+  border: 1px solid #575757;
+  border-radius: 30px;
+  width: 180px;
+  padding: 5px;
+}
+
+#searchBTN{
+  font-size: 12pt;
+  width: 180px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: #858585;
+  color: #ffffff;
+  border: none;
+  text-decoration: none;
+  margin-top: 25px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  transition: all 0.5s ease;
+}
+
+#searchBTN:hover{
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px #000000 solid;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.search-icn{
+  font-size: 21pt;
+  margin-right: 7px;
+  vertical-align: -6px;
+}
+
+/* Go Back Button */
+#returnBTN{
+  font-size: 12pt;
+  width: 160px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: #858585;
+  color: #ffffff;
+  border: none;
+  text-decoration: none;
+  margin-top: 25px;
+  transition: all 0.5s ease;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2;
+}
+
+#returnBTN:hover{
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px #000000 solid;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  transform: scale(1.1);
+}
+
+.return-icn{
+  margin-right: 5px;
+  font-size: 16pt;
+  vertical-align: -4px;
+}
+
+.chk_title{
+  margin-bottom: 10px;
+}
+
+.chk_date{
+  font-size: 11pt;
+  text-align: center;
+  border: 1px solid #575757;
+  border-radius: 30px;
+  width: 160px;
+  padding: 3px;
+}
+
+.chk_time{
+  font-size: 11pt;
+  text-align: center;
+  border: 1px solid #575757;
+  border-radius: 30px;
+  width: 160px;
+  padding: 3px;
+}
+
+.chk_btn{
+  font-size: 12pt;
+  text-align: center;
+  margin-left: 15px;
+  margin-bottom: 30px;
+  border-radius: 30px;
+  width: 120px;
+  padding: 3px;
+  background-color: #858585;
+  border: none;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.chk_btn:hover{
+  background-color: #000000;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  transform: scale(1.1);
+}

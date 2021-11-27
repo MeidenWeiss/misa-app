@@ -1,0 +1,36 @@
+body {
+  text-align: center;
+}
+
+.h_icon {
+  font-size: 26pt;
+  vertical-align: -5px;
+  margin-right: 10px;
+}
+
+h1 {
+  font-size: 21pt;
+  margin-bottom: 50px;
+}
+
+.container {
+  width: 825px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  float: left;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 13px;
+  font-size: 11pt;
+}
+
+tr {
+    border-bottom: 1px solid #000000;
+}

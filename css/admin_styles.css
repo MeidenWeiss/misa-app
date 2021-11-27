@@ -1,0 +1,161 @@
+body {
+    text-align: center;
+  }
+  
+  .h_icon {
+    font-size: 26pt;
+    vertical-align: -5px;
+    margin-right: 10px;
+  }
+  
+  h1 {
+    font-size: 21pt;
+    margin-bottom: 50px;
+  }
+  
+  /* Box item */
+  .box_item{
+    background-color: #858585;
+    color: #fff;
+    width: 425px;
+    height: 350px;
+    padding: 20px;
+    margin: 20px;
+    font-size: 16pt;
+    float: left;
+  }
+
+  .title-right{
+    float: right;
+  }
+  
+  .text-right{
+    margin-left: 6px;
+    font-weight: normal;
+    float: right;
+  }
+  
+  .title-left{
+    float: left;
+  }
+  
+  .text-left{
+    margin-left: 4px;
+    font-weight: normal;
+    float: left;
+  }
+
+  .modifyBTN{
+    font-size: 14pt;
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #ff8929;
+    color: #ffffff;
+    border: none;
+    text-decoration: none;
+    margin-top: 45px;
+    transition: all 0.5s ease;
+  }
+
+  .passBTN{
+    font-size: 14pt;
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #ff8929;
+    color: #ffffff;
+    border: none;
+    text-decoration: none;
+    margin-top: 25px;
+    transition: all 0.5s ease;
+  }
+
+  .removeBTN{
+    font-size: 14pt;
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #ff2f2f;
+    color: #ffffff;
+    border: none;
+    text-decoration: none;
+    margin-top: 25px;
+    transition: all 0.5s ease;
+  }
+
+  .createBTN{
+    font-size: 14pt;
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #00a100;
+    color: #ffffff;
+    border: none;
+    text-decoration: none;
+    margin-top: 15px;
+    clear: both;
+    transition: all 0.5s ease;
+  }
+  
+  .modifyBTN:hover, .passBTN:hover, .removeBTN:hover, .createBTN:hover{
+    background-color: #000000;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+
+  .input_box{
+    font-size: 12pt;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 1px solid #575757;
+    border-radius: 30px;
+    width: 190px;
+    padding: 10px;
+    float: right;
+  }
+
+  .label-title{
+    float: left;
+    font-size: 14pt;
+    margin-top: 20px;
+  }
+
+  .clear_both{
+    clear: both;
+  }
+
+  
+
+  /* Go Back Button */
+#returnBTN{
+  font-size: 12pt;
+  width: 160px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: #858585;
+  color: #ffffff;
+  border: none;
+  text-decoration: none;
+  margin-top: 25px;
+  transition: all 0.5s ease;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2;
+}
+
+#returnBTN:hover{
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px #000000 solid;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  transform: scale(1.1);
+}
+
+.return-icn{
+  margin-right: 5px;
+  font-size: 16pt;
+  vertical-align: -4px;
+}
