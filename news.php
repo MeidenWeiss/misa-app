@@ -34,7 +34,7 @@ $post = new Posts();
 
                 document.write('<img id="image_size" src="images/' + getRandomInt(1, 11) + '.png">');
             </script>
-            <textarea readonly class="desc"><?php echo $item['post_desc'];?></textarea>
+            <textarea class="desc" readonly><?php echo $item['post_desc'];?></textarea><br/>
             <b>Posted by: </b><?php echo $item['postedBy'];?><br/><br/>
         </div>
     </div>
@@ -50,7 +50,7 @@ $post = new Posts();
         <div class="item"><br/>
             <b class="title"><?php echo $item['post_title'];?></b><br/>
             <b class="date"><?php $date = date_create($item['datetime_posted']); echo date_format($date, "F j - (D) h:i A"); ?></b>
-            <textarea readonly class="ann"><?php echo $item['post_desc'];?></textarea>
+            <textarea class="ann" readonly><?php echo $item['post_desc'];?></textarea>
             <b>Posted by: </b><?php echo $item['postedBy'];?><br/><br/>
         </div>
     </div>
