@@ -534,8 +534,8 @@ switch($action){
         $client = $_POST['client_name'];
         $contact = $_POST['contact'];
         $email = $_POST['email'];
-        $startDate = $_POST['startDate'];
-        $endDate = $_POST['endDate'];
+        $startDate = $_POST['Date'];
+        $endDate = $_POST['Date'];
         $startTime = $_POST['startTime'];
         $endTime = $_POST['endTime'];
         $note = $_POST['note'];
