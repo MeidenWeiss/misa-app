@@ -40,8 +40,7 @@ include 'config.php';
             <input class="input_text" type="text" name="contact" placeholder="Contact #" required>
             <input class="input_text" type="text" name="email" placeholder="sample@mail.com"><br/><br/>
             <h3>Set Schedule</h3>
-            Start Date: <input class="input_time" type="date" name="startDate"><br/>
-            End Date: <input class="input_time" type="date" name="endDate"><br/>
+            Date: <input class="input_time" type="date" name="Date"><br/>
             Start Time: <input class="input_time" type="time" name="startTime"><br/>
             End Time: <input class="input_time" type="time" name="endTime"><br/><br/>
             <h3>Additional Notes</h3>
