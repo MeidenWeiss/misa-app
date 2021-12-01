@@ -47,7 +47,7 @@ $post = new Posts();
             <textarea class="ann" readonly>
             <?php 
             if($item['category'] == "Private"){
-                // Empty
+                echo "This is a private event. Invited guests only.";
             }else{
                 echo $item['sched_note'];
             }
