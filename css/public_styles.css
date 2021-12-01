@@ -17,11 +17,6 @@ body {
   border-radius: 30px;
 }
 
-.desc {
-  text-align: left;
-  padding: 10px;
-}
-
 .date {
   font-weight: normal;
 }
@@ -191,4 +186,24 @@ body {
   #image_size{
     max-width: 90%;
     max-height: 90%;
+  }
+
+  .desc{
+    text-align: left;
+    padding: 10px;
+    margin-top: 15px;
+    resize: vertical;
+    border: none;
+    width: 85%;
+    height: 300px;
+  }
+
+  .ann{
+    text-align: left;
+    padding: 10px;
+    margin-top: 15px;
+    resize: vertical;
+    border: none;
+    width: 85%;
+    height: 150px;
   }
