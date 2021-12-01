@@ -30,6 +30,7 @@ $request = new Requests();
                 <option value="Recollection">Recollection</option>
                 <option value="Funerals">Funerals</option>
                 <option value="Confirmation">Confirmation</option>
+                <option value="Scheduled Mass">Scheduled Mass</option>
             </select>
             <input class="input_text" type="text" name="client_name" placeholder="Client Name" required>
             <input class="input_text" type="text" name="contact" placeholder="Contact #" required>
