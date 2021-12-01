@@ -24,7 +24,16 @@ $post = new Posts();
     <div class="container">
         <div class="item"><br/>
             <b class="title"><?php echo $item['post_title'];?></b><br/>
-            <b class="date"><?php $date = date_create($item['datetime_posted']); echo date_format($date, "F j - (D) h:i A"); ?></b>
+            <b class="date"><?php $date = date_create($item['datetime_posted']); echo date_format($date, "F j - (D) h:i A"); ?></b><br/><br/>
+            <script> 
+                function getRandomInt(min, max) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min)) + min; // The maximum is exclusive and the minimum is inclusive
+                }
+
+                document.write('<img id="image_size" src="images/' + getRandomInt(1, 11) + '.png">');
+            </script>
             <p class="desc"><?php echo $item['post_desc'];?></p>
             <b>Posted by: </b><?php echo $item['postedBy'];?><br/><br/>
         </div>
@@ -45,8 +54,8 @@ $post = new Posts();
             <b>Posted by: </b><?php echo $item['postedBy'];?><br/><br/>
         </div>
     </div>
-</body>
-<?php 
+    <?php 
     }
-?>
+    ?>
+</body>
 </html>

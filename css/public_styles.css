@@ -187,3 +187,8 @@ body {
   .status[data-content="CANCELED"] {
     color: #ff2f2f;
   }
+
+  #image_size{
+    max-width: 90%;
+    max-height: 90%;
+  }
