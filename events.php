@@ -44,7 +44,7 @@ $post = new Posts();
             ?><br/>
             <?php $stime = date_create($item['startTime']);echo date_format($stime, "h:i A"); ?> - 
             <?php $etime = date_create($item['endTime']); echo date_format($etime, "h:i A"); ?><br/>
-            <p>
+            <textarea class="ann" readonly>
             <?php 
             if($item['category'] == "Private"){
                 // Empty
@@ -52,7 +52,7 @@ $post = new Posts();
                 echo $item['sched_note'];
             }
             ?>
-            </p>
+            </textarea>
             <b class="title-left">Appointed Priest: </b><?php echo $item['sched_priest'];?><br/><br/>
         </div>
     </div>
