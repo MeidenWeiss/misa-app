@@ -32,7 +32,7 @@ if ($admin->get_session()) {
         foreach ($view_post as $item) {
         ?>
         <div id="form_header">
-            <button class="trashBTN" type="button" onclick="confirmDEL()"><i class='bx bx-trash trash-icon'></i></button>
+            
         </div>
         <div id="form_content">
             <form id="modify" method="POST" action="process.php?action=modify-post">

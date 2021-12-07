@@ -77,4 +77,30 @@ class Schedules{
 		$result = mysqli_query($this->db,$sql);
 		return;
 	}
+
+	public function checkSchedDate($date){ // Search client name
+		$sql ="SELECT * FROM tbl_schedules WHERE startDate = '$date'";
+		$query = mysqli_query($this->db,$sql);
+		while($row = mysqli_fetch_assoc($query)){
+			$result[] = $row;
+		}
+		if(!empty($result)){
+			return $result;
+		}else{
+			return null;																	
+		}
+	}
+
+	public function checkApptDate($date){ // Search client name
+		$sql ="SELECT * FROM tbl_appointments WHERE startDate = '$date'";
+		$query = mysqli_query($this->db,$sql);
+		while($row = mysqli_fetch_assoc($query)){
+			$result[] = $row;
+		}
+		if(!empty($result)){
+			return $result;
+		}else{
+			return null;																	
+		}
+	}
 }

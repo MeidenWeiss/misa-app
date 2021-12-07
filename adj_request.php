@@ -150,18 +150,23 @@ function timeCheck($startTime, $start_compare, $endTime, $end_compare){
         <b>Time: </b> <input class="chk_time" type="time" name="startTime"> - <input class="chk_time" type="time" name="endTime">
         <button class="chk_btn" type="submit" name="check" value="Check">Check</button>
     </form>
-        <?php 
-            if(isset($_POST['check'])){
-                $startDate = $_POST['startDate'];
-                $startTime = $_POST['startTime'];
-                $endTime = $_POST['endTime'];
-                $apptResult = apptConflict($startDate, $startTime, $endTime);
-                $schedResult = schedConflict($startDate, $startTime, $endTime);
-                echo $apptResult . " in Appointments & " . $schedResult . " in Schedules.";
-            }else{
-                // Do nothing...
-            }
-        ?><br/><br/>
+    <div class="alertBox" data-content="<?php if(isset($_GET['message']) || isset($_POST['check'])){echo "message_set";}?>">
+        <?php
+        if(isset($_POST['check'])){
+            $startDate = $_POST['startDate'];
+            $startTime = $_POST['startTime'];
+            $endTime = $_POST['endTime'];
+            $apptResult = apptConflict($startDate, $startTime, $endTime);
+            $schedResult = schedConflict($startDate, $startTime, $endTime);
+            echo $apptResult . " in Appointments & " . $schedResult . " in Schedules.";
+        }else{
+            // Do nothing...
+        }
+        if(isset($_GET['message'])){
+            echo $message = $_GET['message'];
+        }
+        ?>
+    </div><br/>
     <div id="container">
         <?php
         $view_request = $requests->get_request($id);

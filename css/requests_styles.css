@@ -464,3 +464,16 @@ textarea::selection{
 .space1{
   margin-right: 15px;
 }
+
+.alertBox{
+  display: none;
+  width: 700px;
+  border: 5px solid #ff8929;
+  padding: 20px;
+  margin: auto;
+  color: #000000;
+}
+
+.alertBox[data-content="message_set"] {
+  display: block;
+}

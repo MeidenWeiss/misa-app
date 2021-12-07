@@ -26,12 +26,14 @@ if ($admin->get_session()) {
     <div>
         <h1><i class='bx bx-calendar-plus h_icon'></i> Create New Schedule</h1>
         <a href="dashboard.php?page=schedules"><button type="button" id="returnBTN"><i class='bx bxs-chevron-left return-icn'></i>Go back</button></a>
+        <div class="alertBox" data-content="<?php if(isset($_GET['message'])){echo "message_set";}?>">
+        <?php
+        if(isset($_GET['message'])){
+            echo $message = $_GET['message'];
+        }
+        ?>
+        </div><br/>
         <div id="container">
-            <?php 
-            if(isset($_GET['message'])){
-                echo $message = $_GET['message'];
-            }
-            ?>
             <div id="form_header">
                 <b>Fields with * (asterisk) are required</b>
             </div>
